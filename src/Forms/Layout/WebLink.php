@@ -169,7 +169,7 @@ class WebLink extends Element
     {
         if (!empty($this->params)) {
             $separator = (stripos($this->getURL(), '?') === false)? '?' : '&';
-            $this->setURL($this->getURL().$separator.http_build_query($this->params));
+            self::setURL($this->getURL().$separator.http_build_query($this->params));
         }
 
         return '<a ' . $this->getAttributeString() . '>' . $this->content . $this->getEmbeddedElements() . '</a>';
