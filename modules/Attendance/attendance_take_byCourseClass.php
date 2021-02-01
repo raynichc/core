@@ -247,6 +247,7 @@ if (isActionAccessible($guid, $connection2, "/modules/Attendance/attendance_take
 
                                 if ($log['prefill'] == 'N') {
                                     $log = $defaults;
+                                    $log['prefilled'] = 'Person';
                                 }
                             }
 
@@ -255,6 +256,8 @@ if (isActionAccessible($guid, $connection2, "/modules/Attendance/attendance_take
                                 $students[$key]['cellHighlight'] = 'dayAbsent';
                             } elseif ($attendance->isTypeOffsite($log['type'])) {
                                 $students[$key]['cellHighlight'] = 'dayMessage';
+                            } elseif ($attendance->isTypeLate($log['type'])) {
+                                $students[$key]['cellHighlight'] = 'dayPartial';
                             }
 
                             $students[$key]['absenceCount'] = '';
