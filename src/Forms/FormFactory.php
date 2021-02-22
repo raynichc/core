@@ -243,6 +243,10 @@ class FormFactory implements FormFactoryInterface
         return new Input\Person($name);
     }
 
+    public function createDropdown($name)
+    {
+        return new Input\Dropdown($name);
+    }
     /* PRE-DEFINED LAYOUT --------------------------- */
 
     public function createSubheading($content, $tag = 'h4')
