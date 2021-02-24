@@ -1245,7 +1245,8 @@ table.smallIntBorder td.noPadding {
 }
 
 /* v22 Dropdown */
-.dropdown {
+.dropdown,
+.dropdown li ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1264,7 +1265,6 @@ table.smallIntBorder td.noPadding {
 }
 
 .dropdown li div {
-    color: #000000;
     text-align: center;
     display: block;
     padding: 10px;
@@ -1273,24 +1273,17 @@ table.smallIntBorder td.noPadding {
 .dropdown li ul {
     top: 100%;
     left: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: none;
-    border: 1px solid #bfbfbf;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    z-index: 1;
 }
 
 .dropdown li ul li div {
     text-align: left;
-    color: #000000;
     padding: 10px;
     display: block;
     white-space: nowrap;
 }
 
+.dropdown li:hover>div,
 .dropdown li ul li div:hover {
     background-color: #444444;
     color: #ffffff;
@@ -1299,11 +1292,6 @@ table.smallIntBorder td.noPadding {
 .dropdown li ul li ul {
     left: 100%;
     top: 0;
-}
-
-.dropdown li:hover>div {
-    background-color: #444444;
-    color: #ffffff !important;
 }
 
 .dropdown li:hover>ul {
